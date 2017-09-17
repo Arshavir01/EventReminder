@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.eventreminder.AddEventActivity">
+
+    <RelativeLayout
+        android:layout_width="576dp"
+        android:layout_height="295dp"
+        android:padding="15dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <TextView
+            android:id="@+id/infoTextId"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="Set Date and Time for Event Reminder \nex. (1/1/2018 1:1 or 01/01/2018 01:01)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/firstLinerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/infoTextId">
+
+
+            <EditText
+                android:id="@+id/dayId"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:maxLength="2"
+                android:background="@drawable/rounded_edittext"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:hint="day"
+                android:ems="3"
+                android:inputType="date" />
+
+            <TextView
+
+                android:layout_centerHorizontal="true"
+                android:text="/"
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/monthId"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:maxLength="2"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="center"
+                android:hint="month"
+                android:ems="3"
+                android:inputType="date" />
+            <TextView
+
+                android:layout_centerHorizontal="true"
+                android:text="/"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/yearId"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:maxLength="4"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginLeft="5dp"
+                android:hint="year"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:ems="3"
+                android:inputType="date" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondLinerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/firstLinerId">
+
+            <EditText
+                android:id="@+id/hourId"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:maxLength="2"
+                android:background="@drawable/rounded_edittext"
+                android:textAlignment="center"
+                android:hint="hour"
+                android:textColor="#FFFFFF"
+                android:ems="3"
+                android:inputType="time" />
+
+            <TextView
+
+                android:layout_centerHorizontal="true"
+                android:text=":"
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/minuteId"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:maxLength="2"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="center"
+                android:hint="minute"
+                android:textColor="#FFFFFF"
+                android:ems="3"
+                android:inputType="time" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/descId"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Event description"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/secondLinerId"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:onClick="saveClick"
+            android:layout_alignParentRight="true"
+            android:textSize="20dp"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

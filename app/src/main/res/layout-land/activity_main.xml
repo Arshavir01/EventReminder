@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4CAF50"
+    tools:context="com.example.user.eventreminder.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="576dp"
+        android:layout_height="295dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <ListView
+            android:id="@+id/listId"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/listId"
+            android:background="#00FFFFFF"
+            android:onClick="addEventClick"
+            android:src="@drawable/add64"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#FFFFFF"
+            android:text="Long Press on event for deleting it"
+            android:layout_below="@id/listId"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
