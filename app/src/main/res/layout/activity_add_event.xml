@@ -150,6 +150,7 @@
             android:inputType="textPersonName"/>
 
         <TextView
+            android:id="@+id/saveClickId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
@@ -159,6 +160,13 @@
             android:onClick="saveClick"
             android:layout_alignParentRight="true"
             android:textSize="20dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:onClick="shareClick"
+            app:srcCompat="@drawable/share_icon" />
 
 
     </RelativeLayout>

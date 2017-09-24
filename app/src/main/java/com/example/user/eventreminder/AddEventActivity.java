@@ -128,7 +128,7 @@ public class AddEventActivity extends AppCompatActivity {
             setAlarm();
 
         }else {
-            Toast.makeText(this, "Fill all fields",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Fill Date and Time",Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -205,4 +205,29 @@ public class AddEventActivity extends AppCompatActivity {
 
     }
 
+    //Share Button
+    public void shareClick(View view) {
+        String day = dayET.getText().toString();
+        String month = monthET.getText().toString();
+        String year = yearET.getText().toString();
+        String hour = hourET.getText().toString();
+        String minute = minuteET.getText().toString();
+        String description = descriptionET.getText().toString();
+
+        String subject = day+"/"+month+"/"+year+" "+hour+":"+minute;
+        String text = day+"/"+month+"/"+year+" "+hour+":"+minute+"\n "+ description;
+
+        if(day.isEmpty() || month.isEmpty() || year.isEmpty() || hour.isEmpty() || minute.isEmpty()){
+            Toast.makeText(this,"Fill Date and Time", Toast.LENGTH_LONG).show();
+
+        }else {
+            Intent intent;
+            intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+            intent.putExtra(Intent.EXTRA_TEXT, text);
+            startActivity(Intent.createChooser(intent, "Share via"));
+        }
+
+    }
 }
