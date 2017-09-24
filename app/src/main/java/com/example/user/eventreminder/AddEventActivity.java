@@ -215,7 +215,7 @@ public class AddEventActivity extends AppCompatActivity {
         String description = descriptionET.getText().toString();
 
         String subject = day+"/"+month+"/"+year+" "+hour+":"+minute;
-        String text = day+"/"+month+"/"+year+" "+hour+":"+minute+"\n "+ description;
+        String text = subject+"\n "+ description;
 
         if(day.isEmpty() || month.isEmpty() || year.isEmpty() || hour.isEmpty() || minute.isEmpty()){
             Toast.makeText(this,"Fill Date and Time", Toast.LENGTH_LONG).show();
